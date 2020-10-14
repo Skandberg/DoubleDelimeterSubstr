@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication , QWidget, QPushButton, QLineEdit, QLabel, QMessageBox
 from PyQt5 import QtGui 
 
-from MaxString import maxStringWithoutRepeat
+from MaxSubString import maxSubStringWithoutRepeat
 
 
 class App(QWidget):
@@ -46,7 +46,7 @@ class App(QWidget):
         if self.textbox.text()=="":
             QMessageBox.question(self,"app message","Empty input error",QMessageBox.Ok, QMessageBox.Ok)
         else:
-            self.outputLabel.setText(str(maxStringWithoutRepeat(self.textbox.text())))
+            self.outputLabel.setText(str(maxSubStringWithoutRepeat(self.textbox.text())))
 
 
 if __name__ == '__main__':
